@@ -64,15 +64,25 @@ void loop() {
     // Measure pulse duration on ECHO using pulseIn()
     duration = pulseIn(ECHO_PIN, HIGH);
 
+
     // TODO 12:
     // Calculate distance in cm
     distance = duration * 0.034 / 2;
+
 
     // TODO 13:
     // Print calculated distance
     Serial.print("Distance: ");
     Serial.print(distance);
     Serial.println(" cm");
+
+    // Optional warning messages
+    if (distance < 5) {
+        Serial.println("Warning: Object too close!");
+    }
+    else if (distance > 200) {
+        Serial.println("Warning: Object too far!");
+    }
 
     // TODO 14:
     // Add delay (1000ms)
