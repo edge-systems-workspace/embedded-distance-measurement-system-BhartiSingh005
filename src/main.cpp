@@ -75,6 +75,6 @@ void loop() {
     Serial.println(" cm");
 
     // TODO 14:
-    // Add delay (500ms)
-    delay(500);
+    // Add delay (1000ms)
+    delay(1000);
 }
